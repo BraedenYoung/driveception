@@ -14,31 +14,32 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   // and give it some initial binding values
   // Learn more about auto-binding templates at http://goo.gl/Dx1u2g
   var app = document.querySelector('#app');
-  
+
   // Configure app parameters here
-  app.backendUrl = 'https://script.google.com/macros/s/AKfycbwUTpDFOpFxblYhrK8g7NN_IxbhhOTpzCZJo3ZNAFXWAPVlOPKA/exec';
-  app.folders = [{folderId: '0B0CnV_gvF2TgNm1RY2VQQVk5VTA', title: 'Articoli - IT'},
-                 {folderId: '0B0CnV_gvF2TgMDNINGZ3QnZsR0U', title: 'Articles - EN'}];
-  //Optional settings, comment/remove lines if not needed 
-  app.aboutFileId = '1HNhQgOjP4xXTPMKEW94tz54baijIBH4XiLaM4-hn0u8';
-  app.socials = [{'name':'Google +',
-                   'url':'https://plus.google.com/+MauroSmokybobSolcia'},
-                 {'name':'Youtube',
-                   'url':'https://www.youtube.com/user/hackbob84'},
-                 {'name':'GitHub',
-                   'url':'https://github.com/SmokyBob/'},
-                 {'name':'Donate - PayPal',
-                   'url':'https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=F7WPXSVUAJKT4&lc=IT&item_name=Mauro%20Smokybob%20Solcia&item_number=Offer%20me%20a%20Big%20Coffee&currency_code=EUR&bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted'},
-                 {'name':'Engeene.it',
-                   'url':'http://www.engeene.it/author/mauro-solcia/'},
-                 {'name':'Google Developers Italia - YT PlayList',
-                   'url':'http://youtu.be/QRsXBXm3-UM?list=PLOU2XLYxmsIKU5doDlNwQlq7OO6hAY8K-'},
-                 {'name':'Curriculum Vitae',
-                   'url':'https://docs.google.com/document/d/1lMAhJEki3K9p52BAJpgCyXMrIZ6gNi22qqom-PTUdmg/edit?usp=sharing'}
-                ];
-  
-  // Bound to the main headed panel title 
-  app.blogTitle = 'DriveCeption';
+  app.backendUrl = 'https://script.google.com/macros/s/AKfycbx42-3v5RH0PV0VZO3VESpiKgFTA6ZtLUskES7nzKDPCh9fQxJE/exec';
+  app.folders = [{folderId: '0BxWgHwtOE88_SlZOVUlRT3lwLXc', title: 'Projects'},
+                 {folderId: '0BxWgHwtOE88_N3lGM3hiR2lwcms', title: 'Atricles'}];
+
+  //Optional settings, comment/remove lines if not needed
+  // app.aboutFileId = '1HNhQgOjP4xXTPMKEW94tz54baijIBH4XiLaM4-hn0u8';
+  // app.socials = [{'name':'Google +',
+  //                  'url':'https://plus.google.com/+MauroSmokybobSolcia'},
+  //                {'name':'Youtube',
+  //                  'url':'https://www.youtube.com/user/hackbob84'},
+  //                {'name':'GitHub',
+  //                  'url':'https://github.com/SmokyBob/'},
+  //                {'name':'Donate - PayPal',
+  //                  'url':'https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=F7WPXSVUAJKT4&lc=IT&item_name=Mauro%20Smokybob%20Solcia&item_number=Offer%20me%20a%20Big%20Coffee&currency_code=EUR&bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted'},
+  //                {'name':'Engeene.it',
+  //                  'url':'http://www.engeene.it/author/mauro-solcia/'},
+  //                {'name':'Google Developers Italia - YT PlayList',
+  //                  'url':'http://youtu.be/QRsXBXm3-UM?list=PLOU2XLYxmsIKU5doDlNwQlq7OO6hAY8K-'},
+  //                {'name':'Curriculum Vitae',
+  //                  'url':'https://docs.google.com/document/d/1lMAhJEki3K9p52BAJpgCyXMrIZ6gNi22qqom-PTUdmg/edit?usp=sharing'}
+  //               ];
+
+  // Bound to the main headed panel title
+  app.blogTitle = 'devBlog';
   app.showSocials = (app.socials && app.socials.length > 0);
 
   app.displayInstalledToast = function() {
@@ -58,15 +59,15 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       drawerPanel.closeDrawer();
     }
   };
-  
+
   app.toggleSocialCollapse = function() {
     document.querySelector('#socialSubmenu').toggle();
   };
-  
+
   app._forceRefresh = function(event){
     document.querySelector('articles-list').refreshList(event);
   };
-  
+
   app._getArticle = function(articleId, articleList) {
     var article = {};
     if (articleList) {
@@ -82,6 +83,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     }
     return article;
   };
+
   app._articleUrl = function(articleId, articleList){
     var article = null;
     if (articleList) {
@@ -100,7 +102,8 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     }
   };
   app._getUrl = function(id) {
+    //Request URL:https://script.google.com/macros/s/AKfycbwUTpDFOpFxblYhrK8g7NN_IxbhhOTpzCZJo3ZNAFXWAPVlOPKA/exec
+
     return 'https://docs.google.com/document/d/' + id + '/pub?embedded=true';
   };
-
 })(document);

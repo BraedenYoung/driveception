@@ -1,6 +1,6 @@
 {
-  "name": "DriveCeption",
-  "short_name": "DriveCeption",
+  "name": "DriveBlog",
+  "short_name": "DriveBlog",
   "icons": [{
         "src": "images/touch/icon-128x128.png",
         "sizes": "128x128",

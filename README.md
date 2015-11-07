@@ -69,4 +69,4 @@ To build the app run `gulp` and the site will be available for publishing inside
 For a build ready to be deployed on Google App Engine:
 - edit `application` and `version` in `app.yaml`
 - run `gulp build:ae`
-- go to the `dist` folder and run `appcfg.py update .` 
+- go to the `dist` folder and run `appcfg.py update .`

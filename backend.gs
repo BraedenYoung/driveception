@@ -2,17 +2,18 @@ function testDoPost(){
   var e = {};
   e.parameter={};
   e.parameter.action ='getBlogPosts';
-  e.parameter.folderId = 'YOUR_FOLDER_ID';
+  e.parameter.folderId = '0BxWgHwtOE88_bno0UWpsM0wwYUE';
 
   var result = doPost(e);
   result = result;
 }
+
 function doGet(e){
     //return the input params (mostly for debug)
     return ContentService.createTextOutput('PLEASE USE POST')
     .setMimeType(ContentService.MimeType.TEXT);
-
 }
+
 function doPost(e) {
 
   if (e.parameter.action){
